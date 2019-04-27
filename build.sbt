@@ -15,5 +15,9 @@ libraryDependencies ++= Seq(
   , "org.apache.hive" % "hive-service" % hiveVersion
   , "org.apache.hive" % "hive-cli" % hiveVersion
   , "org.scalatest" % "scalatest_2.12" % "3.0.7"
+  , "ch.qos.logback" % "logback-classic" % "1.2.3"
+  , "org.apache.logging.log4j" % "log4j-api" % "2.11.2"
+  , "org.apache.derby" % "derby" % "10.15.1.3"
+
 )
 
