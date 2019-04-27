@@ -1,9 +1,13 @@
+package uk.ac.bbk.dcs.stypes.hive
+
 import java.io.IOException
-import scala.util.Try
+
 import org.apache.hadoop.hive.cli.CliSessionState
 import org.apache.hadoop.hive.conf.HiveConf
 import org.apache.hadoop.hive.ql.Driver
 import org.apache.hadoop.hive.ql.session.SessionState
+
+import scala.util.Try
 
 
 class HiveClient {
@@ -19,6 +23,7 @@ class HiveClient {
     SessionState.start(new CliSessionState(hiveConf))
     driver
   }
+
   /**
     * @param hql
     * @throws {{org.apache.hadoop.hive.ql.CommandNeedRetryException}}
