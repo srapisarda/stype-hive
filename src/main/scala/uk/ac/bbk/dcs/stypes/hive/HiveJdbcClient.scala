@@ -5,8 +5,7 @@ import java.sql.DriverManager
 
 
 object HiveJdbcClient {
-  private val driverName = "org.apache.hive.jdbc.HiveDriver"
-
+  private val driverName = "com.cloudera.hive.jdbc4.HS1Driver"  //  "org.apache.hive.jdbc.HiveDriver"
   @throws[SQLException]
   def main(args: Array[String]): Unit = {
     try
@@ -17,6 +16,8 @@ object HiveJdbcClient {
         e.printStackTrace()
         System.exit(1)
     }
+
+
     val con = DriverManager.getConnection("jdbc:hive://localhost:10000/default", "", "")
     val stmt = con.createStatement
     val tableName = "testHiveDrxiverTable"
