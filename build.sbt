@@ -1,3 +1,4 @@
+
 name := "stypes-hive"
 
 version := "0.1"
@@ -18,10 +19,15 @@ libraryDependencies ++= Seq(
   , "ch.qos.logback" % "logback-classic" % "1.2.3"
   , "ch.qos.logback" % "logback-core" % "1.2.3"
   , "org.apache.logging.log4j" % "log4j-api" % "2.11.2"
-//  , "org.apache.derby" % "derby" % "10.15.1.3"
-//  , "org.datanucleus" % "datanucleus-core" % "5.2.1"
-//  , "org.datanucleus" % "datanucleus-cache" % "5.1.1"
+  ,  "org.apache.derby" % "derby" % "10.15.1.3"
+  , "org.datanucleus" % "datanucleus-core" % "5.2.1"
+  , "org.datanucleus" % "datanucleus-cache" % "5.1.1"
   ,"org.apache.hive" % "hive-jdbc" % hiveVersion
 
 )
 
+
+assemblyMergeStrategy in assembly := {
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+  case x => MergeStrategy.first
+}

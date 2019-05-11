@@ -13,6 +13,7 @@ import scala.util.Try
 class HiveClient {
 
   val hiveConf = new HiveConf(classOf[HiveClient])
+
   /**
     * Get the hive ql driver to execute ddl or dml
     *
