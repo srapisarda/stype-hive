@@ -16,8 +16,12 @@ libraryDependencies ++= Seq(
   , "org.apache.hive" % "hive-cli" % hiveVersion
   , "org.scalatest" % "scalatest_2.12" % "3.0.7"
   , "ch.qos.logback" % "logback-classic" % "1.2.3"
+  , "ch.qos.logback" % "logback-core" % "1.2.3"
   , "org.apache.logging.log4j" % "log4j-api" % "2.11.2"
-  , "org.apache.derby" % "derby" % "10.15.1.3"
+//  , "org.apache.derby" % "derby" % "10.15.1.3"
+//  , "org.datanucleus" % "datanucleus-core" % "5.2.1"
+//  , "org.datanucleus" % "datanucleus-cache" % "5.1.1"
+  ,"org.apache.hive" % "hive-jdbc" % hiveVersion
 
 )
 
